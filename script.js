@@ -17,6 +17,18 @@ navLinks.forEach((link) => {
 });
 
 
+// preloader //
+
+const preloader = document.querySelector(".preloader");
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    preloader.classList.add("hide");
+  }, 900);
+});
+
+
+
 
 // bottom to top // 
 
@@ -118,6 +130,8 @@ const reviewTrack = document.querySelector(".review-track");
   createDots();
   updateReviewSlider();
  
+
+
 
 
 
