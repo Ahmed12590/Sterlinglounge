@@ -468,7 +468,10 @@ body {
 .white-btn {
   background: #fff;
   color: var(--purple-dark);
+  font-weight: 500;
 }
+
+
 .hero-stage {
   height: 345px;
   margin-top: 18px;
