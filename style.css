@@ -740,6 +740,152 @@ body {
 }
 
 
+.marketing {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  padding-top: 120px;
+}
+
+.marketing-copy .small-label {
+  display: inline-block;
+  background: #efe2ff;
+  color: #8149c8;
+  padding: 9px 18px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.marketing-title {
+  font-family: "ChunkFive", "Archivo Black", Impact, sans-serif;
+  font-size: 52px;
+  line-height: 1.18;
+  letter-spacing: 2px;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+.marketing-copy p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 28px;
+  max-width: 520px;
+}
+
+.marketing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.marketing-card {
+  min-height: 230px;
+  background: #f0e8ff;
+  border-radius: 22px;
+  padding: 28px 24px;
+  transition: 0.3s ease;
+}
+
+.marketing-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 45px rgba(83, 55, 129, 0.14);
+}
+
+.marketing-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #8149c8;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  margin-bottom: 26px;
+}
+
+.marketing-card h3 {
+  font-family: "ChunkFive", "Archivo Black", Impact, sans-serif;
+  font-size: 23px;
+  color: #000;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.marketing-card p {
+  font-size: 13px;
+  line-height: 1.65;
+  color: #555;
+}
+
+.marketing-card.active {
+  background: #8149c8;
+}
+
+.marketing-card.active h3,
+.marketing-card.active p,
+.marketing-card.orange-card h3,
+.marketing-card.orange-card p,
+.marketing-card.green-card h3,
+.marketing-card.green-card p {
+  color: #fff;
+}
+
+.marketing-card.active .marketing-icon,
+.marketing-card.orange-card .marketing-icon,
+.marketing-card.green-card .marketing-icon {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.marketing-card.orange-card {
+  background: #fe8b4a;
+}
+
+.marketing-card.green-card {
+  background: #82c118;
+}
+
+@media (max-width: 900px) {
+  .marketing {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .marketing-copy {
+    text-align: center;
+  }
+
+  .marketing-copy p {
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .marketing {
+    padding-top: 80px;
+  }
+
+  .marketing-title {
+    font-size: 31px;
+  }
+
+  .marketing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .marketing-card {
+    min-height: auto;
+  }
+}
+/* marketing section end  */
+
+
 /* ///////////////////////////packges section css//////////////////// */
 .packages {
   position: relative;
