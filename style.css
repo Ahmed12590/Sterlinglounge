@@ -201,7 +201,7 @@ body {
   text-align: center;
   position: relative;
   padding: 25px 0 35px;
-  width: 85%;
+  /* width: 85%; */
 }
 .hero h1,
 .section-title-row h2,
@@ -776,7 +776,7 @@ body {
 
 
 .cta {
-  width: 90%;
+  /* width: 90%;   */
   margin-top: 95px;
   min-height: 285px;
   border-radius: 11px;
