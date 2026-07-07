@@ -1,5 +1,3 @@
-
-
 const menuToggle = document.querySelector(".menu-toggle");
 const navMenu = document.querySelector(".nav-menu");
 const navLinks = document.querySelectorAll(".nav-menu a");
@@ -31,7 +29,6 @@ window.addEventListener("load", () => {
 
 
 // bottom to top // 
-
   const backToTop = document.querySelector(".back-to-top");
 
 window.addEventListener("scroll", () => {

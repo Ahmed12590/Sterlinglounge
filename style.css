@@ -159,7 +159,6 @@ html {
     transform: translateX(230%);
   }
 }
-
 /* preloader css end */
 
 body {
@@ -257,6 +256,13 @@ body {
   font-size: 21px;
   position: relative;
   z-index: 20;
+}
+
+
+.brand img {
+  width: 165px;
+  height: auto;
+  display: block;
 }
 
 .nav-menu {
@@ -577,7 +583,7 @@ body {
   min-height: 300px;
 }
 .small-card img {
-  height: 130px;
+  height: 230px;
 }
 .why {
   display: grid;
