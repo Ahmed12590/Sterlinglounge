@@ -258,7 +258,6 @@ body {
   z-index: 20;
 }
 
-
 .brand img {
   width: 165px;
   height: auto;
@@ -477,24 +476,54 @@ body {
   gap: 40px;
   align-items: center;
 }
+
 .hero-card {
-  height: 350px;
+  height: 290px;
   border-radius: 28px;
   background: var(--lav);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .hero-center {
-  height: 280px;
+  height: 300px;
   border-radius: 25px;
   background: var(--lav);
   position: relative;
   display: flex;
   align-items: end;
   justify-content: center;
+  overflow: hidden;
 }
+
+.hero-card img,
+.hero-center img {
+  width: 88%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Left image */
+.card-left img {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Center image */
 .hero-center img {
   height: 280px;
+  width: auto;
   object-fit: contain;
   z-index: 2;
+}
+
+/* Right image */
+.card-right img {
+  object-fit: cover;
+  object-position: center;
 }
 .tag {
   position: absolute;
@@ -739,7 +768,6 @@ body {
   background: rgba(255, 255, 255, 0.25);
 }
 
-
 .marketing {
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
@@ -884,7 +912,6 @@ body {
   }
 }
 /* marketing section end  */
-
 
 /* ///////////////////////////packges section css//////////////////// */
 .packages {
@@ -1119,18 +1146,7 @@ body {
   }
 }
 
-
 /* ///////////// packges csss end //////////////// */
-
-
-
-
-
-
-
-
-
-
 
 .projects {
   position: relative;
@@ -1637,7 +1653,7 @@ body {
   }
   .hero-card {
     height: 150px;
-    display: none;
+    /* display: none; */
   }
   .hero-center {
     height: 300px;
