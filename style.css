@@ -236,12 +236,15 @@ body {
 }
 .purple {
   background: var(--purple);
+  padding-top: 2px;
 }
 .orange {
   background: var(--orange);
+  padding-top: 2px;
 }
 .green {
   background: var(--green);
+  padding-top: 2px;
 }
 .hero p {
   width: min(560px, 92%);
