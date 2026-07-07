@@ -615,9 +615,9 @@ body {
 .small-card {
   min-height: 300px;
 }
-.small-card img {
+/* .small-card img {
   height: 230px;
-}
+} */
 .why {
   display: grid;
   grid-template-columns: 1fr 1.05fr;
