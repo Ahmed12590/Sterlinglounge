@@ -203,6 +203,11 @@ body {
   padding: 25px 0 35px;
   /* width: 85%; */
 }
+
+
+
+
+
 .hero h1,
 .section-title-row h2,
 .why h2,
@@ -448,6 +453,12 @@ body {
   gap: 55px;
   align-items: end;
 }
+.support-title {
+  font-size: 60px !important;
+  line-height: 1.15;
+}
+
+
 .support h2 {
   font-size: clamp(37px, 5vw, 61px);
 }
@@ -457,10 +468,10 @@ body {
 .support-img {
   align-self: start;
 }
-.support-img img {
+/* .support-img img {
   border-radius: 30px;
   background: var(--lav);
-}
+} */
 .orange-arc {
   left: -55px;
   top: -38px;
@@ -531,24 +542,31 @@ body {
 .center-title h2 {
   font-size: clamp(37px, 6vw, 70px);
 }
+
 .book-row {
-  margin-top: 70px;
+  margin-top: 100px;
   display: flex;
   justify-content: center;
-  gap: 88px;
   align-items: center;
+  gap: 110px;
 }
+
 .book-row img {
   height: 245px;
   border-radius: 10px;
 
 }
+
+/* middle image bhi same size */
 .featured-book {
-  height: 290px !important;
+  width: 250px !important;
+  height: 360px !important;
+  object-fit: contain;
 }
 .book-badge-wrap {
   position: relative;
 }
+
 .book-badge-wrap span {
   position: absolute;
   left: -28px;
@@ -564,6 +582,7 @@ body {
   font-size: 14px;
   z-index: 2;
 }
+
 .reviews {
   position: relative;
   overflow: hidden;
@@ -1044,6 +1063,18 @@ body {
   .support {
     display: block;
   }
+
+.support-title {
+  font-size: 28px !important;
+}
+
+  .projects .center-title h2 {
+    font-size: 25px;
+    line-height: 1.22;
+    letter-spacing: 1px;
+  }
+
+
   .service-grid,
   .review-row {
     grid-template-columns: 1fr;
@@ -1089,7 +1120,7 @@ body {
 }
 @media (max-width: 520px) {
   .hero h1 {
-    font-size: 33px;
+    font-size: 21px;
   }
   .why-copy h2,
   .support h2,
