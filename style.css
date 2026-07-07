@@ -24,6 +24,40 @@ body {
   background: #fff;
   overflow-x: hidden;
 }
+
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 50%;
+  background: #8149C8;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: 0.3s ease;
+  box-shadow: 0 12px 25px rgba(129, 73, 200, 0.28);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: #FE8B4A;
+}
+
+
+
 .wrapper {
   width: min(1200px, 92vw);
   margin-inline: auto;
