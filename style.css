@@ -1162,45 +1162,137 @@ body {
 .center-title h2 {
   font-size: clamp(37px, 6vw, 70px);
 }
-
-.book-row {
-  margin-top: 100px;
+.project-tabs {
+  margin-top: 35px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 110px;
+  gap: 14px;
+  flex-wrap: wrap;
 }
 
-.book-row img {
-  height: 245px;
+.project-tab {
+  border: 0;
+  font-family: "ChunkFive", "Archivo Black", Impact, sans-serif;
+  font-weight:300;
+  font-size: 20px;
+  background: #f0e8ff;
+  color: #111;
+  padding: 12px 24px;
+  border-radius: 40px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.project-tab:hover,
+.project-tab.active {
+  background: var(--purple);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.book-row {
+  margin-top: 80px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+  animation: projectFade 0.35s ease;
+}
+
+.book-row.active {
+  display: flex;
+}
+
+.book-row > img,
+.book-badge-wrap img {
+  width: 250px;
+  height: 360px;
+  object-fit: contain;
   border-radius: 10px;
 }
 
-/* middle image bhi same size */
-.featured-book {
-  width: 250px !important;
-  height: 360px !important;
-  object-fit: contain;
-}
 .book-badge-wrap {
   position: relative;
 }
 
 .book-badge-wrap span {
   position: absolute;
-  left: -28px;
-  top: 88px;
+  left: -35px;
+  top: 145px;
   background: #83d70d;
   color: #fff;
   font-family: "ChunkFive", "Archivo Black", Impact, sans-serif;
   border-radius: 50%;
-  width: 62px;
-  height: 62px;
+  width: 72px;
+  height: 72px;
   display: grid;
   place-items: center;
-  font-size: 14px;
+  font-size: 12px;
   z-index: 2;
 }
+
+@keyframes projectFade {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .book-row {
+    gap: 35px;
+    flex-wrap: wrap;
+  }
+
+  .book-row > img,
+  .book-badge-wrap img {
+    width: 210px;
+    height: 310px;
+  }
+}
+
+@media (max-width: 520px) {
+  .project-tabs {
+    gap: 10px;
+  }
+
+  .project-tab {
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+
+  .book-row {
+    margin-top: 45px;
+    gap: 25px;
+  }
+
+  .book-row > img,
+  .book-badge-wrap img {
+    width: 170px;
+    height: 245px;
+  }
+
+  .book-badge-wrap span {
+    width: 58px;
+    height: 58px;
+    left: -22px;
+    top: 95px;
+    font-size: 10px;
+  }
+}
+
+
+
+
+
+
+
 
 .reviews {
   position: relative;

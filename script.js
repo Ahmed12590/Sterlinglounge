@@ -130,8 +130,25 @@ const reviewTrack = document.querySelector(".review-track");
 
 
 
+// toggle section ///
 
 
+  const projectTabs = document.querySelectorAll(".project-tab");
+const projectRows = document.querySelectorAll(".book-row");
 
+projectTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = tab.getAttribute("data-tab");
 
+    projectTabs.forEach((btn) => btn.classList.remove("active"));
+    tab.classList.add("active");
 
+    projectRows.forEach((row) => {
+      row.classList.remove("active");
+
+      if (row.getAttribute("data-content") === target) {
+        row.classList.add("active");
+      }
+    });
+  });
+});
