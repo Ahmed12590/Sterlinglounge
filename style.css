@@ -1173,15 +1173,21 @@ body {
 .project-tab {
   border: 0;
   font-family: "ChunkFive", "Archivo Black", Impact, sans-serif;
-  font-weight:300;
-  font-size: 20px;
+  font-weight: 300;
+  font-size: 16px;
   background: #f0e8ff;
   color: #111;
   padding: 12px 24px;
   border-radius: 40px;
-  font-size: 14px;
   cursor: pointer;
   transition: 0.3s ease;
+}
+
+.project-tab:hover,
+.project-tab.active {
+  background: var(--purple);
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 .project-tab:hover,
