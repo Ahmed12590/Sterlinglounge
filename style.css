@@ -915,6 +915,8 @@ body {
 }
 /* marketing section end  */
 
+
+
 /* ///////////////////////////packges section css//////////////////// */
 .packages {
   position: relative;
@@ -1777,20 +1779,7 @@ body {
   }
 }
 
-@media (max-width: 600px) {
-  .footer-bottom {
-    grid-column: 1;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
 
-  .footer-policy-links {
-    margin-left: 0;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-  }
-}
 
 @media (max-width: 900px) {
   .footer {
@@ -1798,9 +1787,7 @@ body {
     gap: 35px;
   }
 
-  .footer-bottom {
-    grid-column: 1 / 3;
-  }
+ 
 }
 
 @media (max-width: 600px) {
@@ -1809,12 +1796,7 @@ body {
     padding: 65px 20px 30px;
   }
 
-  .footer-bottom {
-    grid-column: 1;
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
-  }
+ 
 
   .footer-left-ring {
     left: -115px;
