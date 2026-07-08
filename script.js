@@ -133,22 +133,105 @@ const reviewTrack = document.querySelector(".review-track");
 // toggle section ///
 
 
-  const projectTabs = document.querySelectorAll(".project-tab");
-const projectRows = document.querySelectorAll(".book-row");
+//   const projectTabs = document.querySelectorAll(".project-tab");
+// const projectRows = document.querySelectorAll(".book-row");
+
+// projectTabs.forEach((tab) => {
+//   tab.addEventListener("click", () => {
+//     const target = tab.getAttribute("data-tab");
+
+//     projectTabs.forEach((btn) => btn.classList.remove("active"));
+//     tab.classList.add("active");
+
+//     projectRows.forEach((row) => {
+//       row.classList.remove("active");
+
+//       if (row.getAttribute("data-content") === target) {
+//         row.classList.add("active");
+//       }
+//     });
+//   });
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+const projectTabs = document.querySelectorAll(".project-tab");
+const projectSliders = document.querySelectorAll(".project-slider");
+
+function getProjectVisibleCards() {
+  return window.innerWidth <= 650 ? 1 : 2;
+}
+
+function updateProjectSlider(slider) {
+  const track = slider.querySelector(".project-track");
+  const cards = slider.querySelectorAll(".project-card");
+  const currentIndex = Number(slider.dataset.index || 0);
+  const gap = parseInt(getComputedStyle(track).gap) || 0;
+  const cardWidth = cards[0].offsetWidth;
+  const maxIndex = Math.max(0, cards.length - getProjectVisibleCards());
+  const fixedIndex = Math.min(currentIndex, maxIndex);
+
+  slider.dataset.index = fixedIndex;
+  track.style.transform = `translateX(-${fixedIndex * (cardWidth + gap)}px)`;
+}
 
 projectTabs.forEach((tab) => {
   tab.addEventListener("click", () => {
-    const target = tab.getAttribute("data-tab");
+    const target = tab.dataset.tab;
 
     projectTabs.forEach((btn) => btn.classList.remove("active"));
     tab.classList.add("active");
 
-    projectRows.forEach((row) => {
-      row.classList.remove("active");
+    projectSliders.forEach((slider) => {
+      slider.classList.remove("active");
 
-      if (row.getAttribute("data-content") === target) {
-        row.classList.add("active");
+      if (slider.dataset.content === target) {
+        slider.classList.add("active");
+        updateProjectSlider(slider);
       }
     });
   });
 });
+
+projectSliders.forEach((slider) => {
+  slider.dataset.index = 0;
+
+  const prev = slider.querySelector(".project-prev");
+  const next = slider.querySelector(".project-next");
+  const cards = slider.querySelectorAll(".project-card");
+
+  next.addEventListener("click", () => {
+    const maxIndex = Math.max(0, cards.length - getProjectVisibleCards());
+    let index = Number(slider.dataset.index || 0);
+
+    index = index >= maxIndex ? 0 : index + 1;
+    slider.dataset.index = index;
+
+    updateProjectSlider(slider);
+  });
+
+  prev.addEventListener("click", () => {
+    const maxIndex = Math.max(0, cards.length - getProjectVisibleCards());
+    let index = Number(slider.dataset.index || 0);
+
+    index = index <= 0 ? maxIndex : index - 1;
+    slider.dataset.index = index;
+
+    updateProjectSlider(slider);
+  });
+});
+
+window.addEventListener("resize", () => {
+  projectSliders.forEach(updateProjectSlider);
+});
+
+projectSliders.forEach(updateProjectSlider);
