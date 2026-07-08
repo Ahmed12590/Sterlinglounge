@@ -1007,6 +1007,17 @@ body {
   font-size: 22px;
   margin-bottom: 28px;
 }
+.package-icon-color{
+  width: 52px;
+  height: 52px;
+  background:white;
+  color: var(--purple);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  margin-bottom: 28px;
+}
 
 .package-card h3 {
   font-family: "ChunkFive", "Archivo Black", Impact, sans-serif;
@@ -1102,7 +1113,7 @@ body {
 }
 
 .featured-package .package-icon {
-  background: #fe8b4a;
+  background: var(--purple);
 }
 
 .featured-package .package-btn {
