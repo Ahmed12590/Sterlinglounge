@@ -913,6 +913,8 @@ body {
 
   .marketing-title {
     font-size: 31px;
+        text-align: left;
+
   }
 
   .marketing-grid {
@@ -1151,6 +1153,8 @@ body {
 
   .packages-head h2 {
     font-size: 31px;
+      text-align: left;
+
   }
 
   .package-card {
@@ -1361,9 +1365,11 @@ body {
 @media (max-width: 520px) {
   .projects-title,
   .projects .center-title h2 {
-    font-size: 28px;
+    font-size: 27px;
     line-height: 1.28;
     letter-spacing: 0.5px;
+        text-align: left;
+
   }
 
   .projects-title .orange,
