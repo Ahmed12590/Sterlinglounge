@@ -568,9 +568,7 @@ body {
 .section-gap {
   padding-top: 95px;
 }
-.wide-gap {
-  /* padding-top: 170px; */
-}
+
 .section-title-row {
   display: flex;
   align-items: flex-start;
@@ -935,7 +933,7 @@ body {
 
 
 
-/* ///////////////////////////packges section css//////////////////// */
+/* ///////////////////////////packges section css //////////////////// */
 .packages {
   position: relative;
   padding-top: 120px;
@@ -1183,7 +1181,7 @@ body {
   }
 }
 
-/* ///////////// packges csss end //////////////// */
+/* ///////////// packges css end //////////////// */
 .projects {
   position: relative;
   padding-top: 95px;
@@ -2005,7 +2003,7 @@ body {
   }
 }
 
-/* //////////////// privacy policy  csss /////////////// */
+/* //////////////// privacy policy  css /////////////// */
 
 
 
