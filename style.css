@@ -286,7 +286,7 @@ body {
 }
 
 .nav-btn {
-  background: #80d21a;
+  background: var(--purple);
   color: #fff;
   text-decoration: none;
   padding: 13px 26px;
@@ -296,10 +296,10 @@ body {
   transition: 0.3s ease;
 }
 .nav-btn:hover {
-  background: #8149c8;
+  background: var(--green);
   color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(129, 73, 200, 0.25);
+ 
 }
 
 .menu-toggle {
@@ -468,6 +468,13 @@ body {
   background: #fff;
   color: var(--purple-dark);
   font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.white-btn:hover {
+  background: var(--green);
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 .hero-stage {
