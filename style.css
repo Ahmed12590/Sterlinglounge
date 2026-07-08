@@ -1740,6 +1740,14 @@ body {
   fill: #111;
 }
 
+.contact-item p a {
+  color: #111;
+  text-decoration: none;
+}
+
+.contact-item p a:hover {
+  color: var(--purple);
+}
 @media (max-width: 520px) {
   .contact-icon {
     width: 40px;
