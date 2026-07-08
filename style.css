@@ -1699,7 +1699,7 @@ body {
 
 .contact-item {
   display: flex;
-  gap: 14px;
+  gap: 16px;
   align-items: flex-start;
   margin-bottom: 24px;
 }
@@ -1709,17 +1709,42 @@ body {
   line-height: 1.55;
 }
 
+.contact-item p b {
+  display: inline-block;
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+
 .contact-icon {
-  width: 34px;
-  height: 34px;
-  border: 1px solid #111;
+  width: 44px;
+  height: 44px;
+  border: 1.5px solid #111;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  font-size: 14px;
+  flex: 0 0 44px;
   color: #111;
+}
+
+.contact-icon svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  fill: #111;
+}
+
+@media (max-width: 520px) {
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+  }
+
+  .contact-icon svg {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .footer-bottom {
