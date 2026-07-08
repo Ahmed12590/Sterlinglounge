@@ -235,3 +235,50 @@ window.addEventListener("resize", () => {
 });
 
 projectSliders.forEach(updateProjectSlider);
+
+
+
+
+
+
+
+
+
+
+// popup form js
+document.addEventListener("DOMContentLoaded", function () {
+  const popup = document.getElementById("contactPopup");
+  const popupOpenBtns = document.querySelectorAll(".open-popup");
+  const popupClose = document.querySelector(".popup-close");
+
+  if (!popup) return;
+
+  popupOpenBtns.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      popup.classList.add("show");
+      document.body.classList.add("popup-active");
+    });
+  });
+
+  if (popupClose) {
+    popupClose.addEventListener("click", function () {
+      popup.classList.remove("show");
+      document.body.classList.remove("popup-active");
+    });
+  }
+
+  popup.addEventListener("click", function (e) {
+    if (e.target === popup) {
+      popup.classList.remove("show");
+      document.body.classList.remove("popup-active");
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      popup.classList.remove("show");
+      document.body.classList.remove("popup-active");
+    }
+  });
+});
