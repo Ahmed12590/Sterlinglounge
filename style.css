@@ -1119,8 +1119,8 @@ body {
   position: absolute;
   top: 24px;
   right: 24px;
-  background: #fe8b4a;
-  color: #fff;
+  background: #fff;
+  color: var(--purple);
   border-radius: 30px;
   padding: 8px 14px;
   font-size: 11px;
@@ -2270,4 +2270,39 @@ body.popup-active {
   .popup-form textarea {
     padding: 14px;
   }
+}
+
+
+
+
+
+
+.quote-btn-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.custom-quote-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--purple);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 15px 38px;
+  font-family: Poppins, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  /* box-shadow: 0 12px 25px rgba(129, 73, 200, 0.25); */
+}
+
+.custom-quote-btn:hover {
+  background: var(--green);
+  color: #fff;
+  transform: translateY(-3px);
+  /* box-shadow: 0 16px 30px rgba(130, 193, 24, 0.28); */
 }
