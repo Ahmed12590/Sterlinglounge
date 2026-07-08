@@ -244,41 +244,41 @@ projectSliders.forEach(updateProjectSlider);
 
 
 
+// popup form js - works on all pages
 
-// popup form js
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("click", function (e) {
+  const openBtn = e.target.closest(".open-popup");
+  const closeBtn = e.target.closest(".popup-close");
   const popup = document.getElementById("contactPopup");
-  const popupOpenBtns = document.querySelectorAll(".open-popup");
-  const popupClose = document.querySelector(".popup-close");
 
-  if (!popup) return;
+  if (openBtn) {
+    e.preventDefault();
 
-  popupOpenBtns.forEach(function (btn) {
-    btn.addEventListener("click", function (e) {
-      e.preventDefault();
-      popup.classList.add("show");
-      document.body.classList.add("popup-active");
-    });
-  });
+    if (!popup) {
+      console.log("Popup HTML missing on this page");
+      return;
+    }
 
-  if (popupClose) {
-    popupClose.addEventListener("click", function () {
-      popup.classList.remove("show");
-      document.body.classList.remove("popup-active");
-    });
+    popup.classList.add("show");
+    document.body.classList.add("popup-active");
   }
 
-  popup.addEventListener("click", function (e) {
-    if (e.target === popup) {
-      popup.classList.remove("show");
-      document.body.classList.remove("popup-active");
-    }
-  });
+  if (closeBtn && popup) {
+    popup.classList.remove("show");
+    document.body.classList.remove("popup-active");
+  }
 
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") {
-      popup.classList.remove("show");
-      document.body.classList.remove("popup-active");
-    }
-  });
+  if (popup && e.target === popup) {
+    popup.classList.remove("show");
+    document.body.classList.remove("popup-active");
+  }
+});
+
+document.addEventListener("keydown", function (e) {
+  const popup = document.getElementById("contactPopup");
+
+  if (e.key === "Escape" && popup) {
+    popup.classList.remove("show");
+    document.body.classList.remove("popup-active");
+  }
 });

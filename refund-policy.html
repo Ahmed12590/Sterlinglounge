@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Refund Policy </title>
+  <title>Refund Policy</title>
   <link rel="icon" type="image/png" href="assets/fav.png">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -52,7 +52,7 @@
           <li><a href="index.html#reviews">Testimonials</a></li>
         </ul>
 
-        <a class="nav-btn open-popup" href="javascript:void(0)">Start Your Book Journey</a>
+       <a class="nav-btn open-popup" href="javascript:void(0)">Contact Us</a>
       </div>
     </nav>
   </header>
@@ -60,7 +60,6 @@
   <main>
     <section class="policy-hero wrapper">
       <h1><span class="purple">REFUND</span> POLICY</h1>
-      
     </section>
 
     <section class="policy-content wrapper">
@@ -222,14 +221,85 @@
           <span>|</span>
           <a href="refund-policy.html">Refund Policy</a>
         </div>
-
-    
       </div>
     </div>
   </footer>
 
   <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
 
-  <script src="script.js"></script>
+
+
+<button class="back-to-top" type="button" aria-label="Back to top">↑</button>
+
+<div class="popup-overlay" id="contactPopup">
+  <div class="popup-box">
+    <button class="popup-close" type="button" aria-label="Close popup">×</button>
+
+    <div class="popup-head">
+      <span class="small-label">Start Your Project</span>
+      <h2>GET A FREE QUOTE</h2>
+      <p>Fill out the form below and our team will contact you shortly.</p>
+    </div>
+
+    <form class="popup-form">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+      </div>
+
+      <div class="form-row">
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <select name="service" required>
+          <option value="">Select Service</option>
+          <option value="Book Cover">Book Cover</option>
+          <option value="Illustration">Illustration</option>
+          <option value="Self Publishing">Self Publishing</option>
+          <option value="Content Writing">Content Writing</option>
+          <option value="Marketing">Marketing</option>
+          <option value="Website">Website</option>
+        </select>
+      </div>
+
+      <textarea name="message" placeholder="Tell us about your project" required></textarea>
+
+      <button type="submit" class="popup-submit">Submit Request</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("click", function (e) {
+    const openBtn = e.target.closest(".open-popup");
+    const closeBtn = e.target.closest(".popup-close");
+    const popup = document.getElementById("contactPopup");
+
+    if (openBtn) {
+      e.preventDefault();
+      popup.classList.add("show");
+      document.body.classList.add("popup-active");
+    }
+
+    if (closeBtn) {
+      popup.classList.remove("show");
+      document.body.classList.remove("popup-active");
+    }
+
+    if (popup && e.target === popup) {
+      popup.classList.remove("show");
+      document.body.classList.remove("popup-active");
+    }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    const popup = document.getElementById("contactPopup");
+
+    if (e.key === "Escape" && popup) {
+      popup.classList.remove("show");
+      document.body.classList.remove("popup-active");
+    }
+  });
+</script>
+
+<script src="script.js"></script>
 </body>
 </html>
