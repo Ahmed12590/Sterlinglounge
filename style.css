@@ -569,6 +569,7 @@ body {
 }
 .mini-btn,
 .pill {
+  display: inline-block;
   background: var(--purple);
   color: #fff;
   text-decoration: none;
@@ -578,7 +579,9 @@ body {
   padding: 10px 19px;
   transition: 0.3s ease;
 }
-.mini-btn:hover {
+
+.mini-btn:hover,
+.pill:hover {
   background: var(--green);
   color: #fff;
   transform: translateY(-2px);
@@ -1064,7 +1067,7 @@ body {
 }
 
 .package-btn:hover {
-  background: #fe8b4a;
+  background: var(--green);
   transform: translateY(-2px);
 }
 
@@ -1094,11 +1097,13 @@ body {
 }
 
 .featured-package .package-btn {
-  background: #82c118;
+  background: white;
+  color: #050505;
 }
 
 .featured-package .package-btn:hover {
-  background: #fe8b4a;
+  background: var(--green);
+  color: white;
 }
 
 .popular-badge {
@@ -1268,7 +1273,7 @@ body {
   height: 46px;
   border: 0;
   border-radius: 50%;
-  background: #ff5b22;
+  background:var(--purple);
   color: #fff;
   font-size: 30px;
   cursor: pointer;
@@ -1277,7 +1282,7 @@ body {
 }
 
 .project-arrow:hover {
-  background: var(--purple);
+  background: var(--purple-dark);
 }
 
 .project-prev {
