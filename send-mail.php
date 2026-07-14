@@ -29,7 +29,7 @@ $mail = new PHPMailer(true);
 
 try {
   $mail->isSMTP();
-  $mail->Host = 'mail.sterlingdigitalservices.agency';
+  $mail->Host = 'mtp.gmail.com';
   $mail->SMTPAuth = true;
   $mail->Username = 'info@sterlingdigitalservices.agency';
   $mail->Password = 'YOUR_EMAIL_PASSWORD';
@@ -37,11 +37,11 @@ try {
   $mail->Port = 587;
 
   $mail->setFrom('info@sterlingdigitalservices.agency', 'STERLING DIGITAL SERVICES');
-  $mail->addAddress('info@sterlingdigitalservices.agency');
+  $mail->addAddress('info@sterlingdigitalservices.agency' , 'STERLING Popup form');
   $mail->addReplyTo($email, $name);
 
   $mail->isHTML(true);
-  $mail->Subject = 'New Contact Form Submission - STERLING DIGITAL SERVICES';
+  $mail->Subject = 'Popup form - STERLING DIGITAL SERVICES';
 
   $mail->Body = "
     <h2>New Contact Form Submission</h2>
@@ -63,9 +63,9 @@ try {
   ";
 
   $mail->send();
+  echo 'Message has been sent';
 
-  header("Location: thank-you.html");
-  exit;
+ 
 
 } catch (Exception $e) {
   echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
