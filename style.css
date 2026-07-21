@@ -1718,6 +1718,10 @@ body {
   margin-bottom: 2px;
   font-weight: 700;
 }
+.registered-office .contact-icon svg path {
+    fill: #6A0DAD; /* Purple */
+}
+
 
 .contact-icon {
   width: 44px;
